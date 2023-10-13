@@ -8,7 +8,9 @@ sealed class Screens(val rout:String) {
     object Detail:Screens("home_scree")
 }
 ```
+
 ### graph for simple navigation
+
 ```
 @Composable
 fun NavGraphSetup(navController: NavHostController) {
@@ -29,25 +31,31 @@ fun NavGraphSetup(navController: NavHostController) {
     }
 }
 ```
+
 ### Argument Navigation Graph
 
 `
 const val DETAIL_ARGUMENT_ID = "id"
+
 const val DETAIL_ARGUMENT_NAME = "name"
 `
+
 ``` 
 
 sealed class Screens(val rout: String) {
-object Home : Screens("home_screen")
-object Detail : Screens("detail_screen?id={$DETAIL_ARGUMENT_ID}&name={$DETAIL_ARGUMENT_NAME}") {
-fun passArguments(id: Int, name: String): String {
-return "detail_screen?id=$id&name=$name"
-}
-}
+    object Home : Screens("home_screen")
+    object Detail : Screens("detail_screen?id={$DETAIL_ARGUMENT_ID}&name={$DETAIL_ARGUMENT_NAME}") {
+        fun passArguments(id: Int, name: String): String {
+            return "detail_screen?id=$id&name=$name"
+        }
+    }
 }
 ```
+
 ## if we want to pass argument then we will use like this
+
 ### graph for passing argument
+
 ```agsl
 @Composable
 fun NavGraphSetup(navController: NavHostController) {
