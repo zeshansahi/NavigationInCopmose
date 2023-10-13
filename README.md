@@ -34,13 +34,11 @@ fun NavGraphSetup(navController: NavHostController) {
 
 ### Argument Navigation Graph
 
-`
+```
 const val DETAIL_ARGUMENT_ID = "id"
 
 const val DETAIL_ARGUMENT_NAME = "name"
-`
-
-``` 
+ 
 
 sealed class Screens(val rout: String) {
     object Home : Screens("home_screen")
