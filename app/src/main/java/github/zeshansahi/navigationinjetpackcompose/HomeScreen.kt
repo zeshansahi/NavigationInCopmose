@@ -21,7 +21,7 @@ fun HomeScreen(navHostController: NavHostController) {
     ) {
         Text(
             modifier = Modifier.clickable {
-                navHostController.navigate(Screens.Detail.rout)
+                navHostController.navigate(route = Screens.Detail.passArguments(1, "zeshan-sahi"))
             },
             text = "Home scree",
             fontSize = MaterialTheme.typography.headlineLarge.fontSize,

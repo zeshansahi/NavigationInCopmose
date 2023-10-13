@@ -1,5 +1,6 @@
 package github.zeshansahi.navigationinjetpackcompose
 
+import android.util.Log
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,9 +13,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 
+private const val TAG = "DetailScreen"
+
 @Composable
 fun DetailScreen(navHostController: NavHostController) {
-
+    Log.e(TAG, "DetailScreen: ")
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
