@@ -1,4 +1,4 @@
-# NavigationInCopmose
+# Simple navigation graph implementation concept
 
 ### Simple Navigation Graph
 
