@@ -16,6 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import github.zeshansahi.navigationinjetpackcompose.navigations.Screens
 
 @Composable
 fun LoginScreen(navHostController: NavHostController) {
@@ -30,7 +31,11 @@ fun LoginScreen(navHostController: NavHostController) {
                 text = "LoginScreen"
             )
             Spacer(modifier = Modifier.height(10.dp))
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = {
+                navHostController.navigate(
+                    route = Screens.Signup.rout
+                )
+            }) {
                 Text(text = "Go to signup")
             }
         }

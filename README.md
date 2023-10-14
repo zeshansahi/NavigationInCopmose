@@ -1,6 +1,6 @@
 # Simple navigation graph implementation concept
 
-### Constants for navigation
+### Constants for navigation and rout class
 ```
 const val DETAIL_ARGUMENT_KEY = "id"
 const val DETAIL_ARGUMENT_KEY2 = "name"

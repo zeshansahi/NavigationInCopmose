@@ -16,6 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import github.zeshansahi.navigationinjetpackcompose.navigations.Screens
 
 
 @Composable
@@ -30,7 +31,15 @@ fun SignupScreen(navHostController: NavHostController) {
                 fontSize = MaterialTheme.typography.headlineLarge.fontSize
             )
             Spacer(modifier = Modifier.height(10.dp))
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = {
+                navHostController.navigate(
+                    route = Screens.Longin.rout
+                ) {
+                    popUpTo(Screens.Longin.rout) {
+                        inclusive = true
+                    }
+                }
+            }) {
                 Text(text = "Go back to login")
             }
         }
