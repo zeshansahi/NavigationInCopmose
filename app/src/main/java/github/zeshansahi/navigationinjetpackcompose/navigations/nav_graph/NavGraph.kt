@@ -9,6 +9,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import github.zeshansahi.navigationinjetpackcompose.navigations.DETAIL_ARGUMENT_ID
 import github.zeshansahi.navigationinjetpackcompose.navigations.DETAIL_ARGUMENT_NAME
+import github.zeshansahi.navigationinjetpackcompose.navigations.HOME_GRAPH_ROUTE
+import github.zeshansahi.navigationinjetpackcompose.navigations.ROOT_GRAPH_ROUTE
 import github.zeshansahi.navigationinjetpackcompose.navigations.Screens
 import github.zeshansahi.navigationinjetpackcompose.viewScreens.DetailScreen
 import github.zeshansahi.navigationinjetpackcompose.viewScreens.HomeScreen
@@ -18,22 +20,10 @@ private const val TAG = "NavGraph"
 @Composable
 fun NavGraphSetup(navController: NavHostController) {
     NavHost(
-        navController = navController, startDestination = Screens.Home.rout
+        navController = navController,
+        startDestination = HOME_GRAPH_ROUTE,
+        route = ROOT_GRAPH_ROUTE
     ) {
-        composable(
-            route = Screens.Home.rout
-        ) {
-            HomeScreen(navController)
-        }
-        composable(route = Screens.Detail.rout, arguments = listOf(navArgument(DETAIL_ARGUMENT_ID) {
-            type = NavType.IntType
-            defaultValue = 0
-        }, navArgument(DETAIL_ARGUMENT_NAME) {
-            type = NavType.StringType
-        })) {
-            Log.e(TAG, "NavGraphSetup: ${it.arguments?.getInt(DETAIL_ARGUMENT_ID).toString()}")
-            Log.e(TAG, "NavGraphSetup: ${it.arguments?.getString(DETAIL_ARGUMENT_NAME).toString()}")
-            DetailScreen(navController)
-        }
+
     }
 }
