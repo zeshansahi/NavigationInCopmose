@@ -1,4 +1,4 @@
-package github.zeshansahi.navigationinjetpackcompose
+package github.zeshansahi.navigationinjetpackcompose.viewScreens
 
 import android.util.Log
 import androidx.compose.foundation.clickable
@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import github.zeshansahi.navigationinjetpackcompose.navigations.Screens
 
 private const val TAG = "DetailScreen"
 

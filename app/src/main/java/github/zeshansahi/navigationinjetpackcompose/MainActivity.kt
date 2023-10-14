@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import github.zeshansahi.navigationinjetpackcompose.navigations.nav_graph.NavGraphSetup
 import github.zeshansahi.navigationinjetpackcompose.ui.theme.NavigationInJetpackComposeTheme
 
 class MainActivity : ComponentActivity() {

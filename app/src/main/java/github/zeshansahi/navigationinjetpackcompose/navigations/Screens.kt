@@ -1,4 +1,4 @@
-package github.zeshansahi.navigationinjetpackcompose
+package github.zeshansahi.navigationinjetpackcompose.navigations
 
 const val DETAIL_ARGUMENT_ID = "id"
 const val DETAIL_ARGUMENT_NAME = "name"
