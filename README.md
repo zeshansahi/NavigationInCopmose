@@ -1,8 +1,23 @@
 # Simple navigation graph implementation concept
 
+## Branches
+
+- main
+- nestedNavigation
+
+### main
+
+- This [branch](https://github.com/zeshansahi/NavigationInCopmose) is simple navigation and passing
+  the argument from one destination to other
+
+### nestedNavigation
+
+- This [branch](https://github.com/zeshansahi/NavigationInCopmose/tree/nestedNavigation) demonstrate
+  the nested navigation
+
 ### Simple Navigation Graph
 
-```agsl
+``` 
 sealed class Screens(val rout:String) {
     object Home:Screens("home_scree")
     object Detail:Screens("home_scree")
@@ -54,7 +69,7 @@ sealed class Screens(val rout: String) {
 
 ### graph for passing argument
 
-```agsl
+``` 
 @Composable
 fun NavGraphSetup(navController: NavHostController) {
     NavHost(
